@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    padding-top: 20px;
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(26, 2, 2);
+}
+li{
+    display: inline;
+}
+.navbar-items{
+    color: white;
+    font-size: 20px;
+   text-align: center;
+    text-decoration-line: none;
+    margin-right: 20px;
+}
+ul form{
+    float: right;
+    padding-bottom: 10px;
+}
