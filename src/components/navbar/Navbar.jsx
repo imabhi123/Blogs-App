@@ -9,19 +9,34 @@ const Navbar = () => {
   }
   return (
     <div>
-        <nav>
-            <ul>
-            <li><Link className='navbar-items links' to="/">Postgram</Link></li>
-            <li><Link className='navbar-items links' to="/">Home</Link></li>
-            <li><Link className='navbar-items links' to="/about">About</Link></li>
-            {localStorage.getItem('token')===null?<form className='d-flex'>
-              <Link className='btn btn-primary mx-2' role='button'to="/login">login</Link>
-              <Link className='btn btn-primary mx-2' role='button' to="/signup">Signup</Link>
-            </form>:<form className='d-flex'>
-              <button className='btn btn-primary mx-2' onClick={handleLogout}>logout</button>
-            </form>}
-            </ul>
-        </nav>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light m-auto px-md-3 pt-3">
+  <h1 className="navbar-brand px-3 text-success fs-1  fw-bold" href=" ">CrossVal.</h1>
+  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target=" navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon" />
+  </button>
+  <div className="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+    <ul className="navbar-nav mr-auto">
+      <li  className="nav-item fw-bold px-3  active">
+        <a className="nav-link " href=" ">Home <span className="sr-only d-none">(current)</span></a>
+      </li>
+      <li  className="nav-item fw-bold px-3">
+        <a className="nav-link" href=" ">Features</a>
+      </li>
+      <li  className="nav-item fw-bold px-3">
+        <a className="nav-link " href=" ">Testimonials</a>
+      </li>
+      <li  className="nav-item fw-bold px-3">
+        <a className="nav-link" href=" ">Blog</a>
+      </li>
+      <li  className="nav-item fw-bold px-3">
+        <a className="nav-link text-bold" href=" ">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+ <form className="form-inline my-2 px-3 my-lg-0">
+      <button className="btn-success btn-outline-0 border-0 rounded text-white my-2 py-1 px-3 fw-bold " type="submit">Book A Demo</button>
+    </form>
+</nav>
     </div>
   )
 }

@@ -18,14 +18,14 @@ const BlogState=(props)=>{
         setBlogs(json);
       }
       //Add a Blog
-      const addBlog=async(title,description,tag)=>{
+      const addBlog=async(title,imgUrl,title_2,description,title_3,description_2,title_4,description_3,title_5,description_4,tag)=>{
         const response=await fetch(`${host}/api/blogs/addblog`,{
           method:'POST',
           headers:{
             'Content-Type':'Application/json',
             'auth-token':localStorage.getItem('token')
           },
-          body:JSON.stringify({title,description,tag})
+          body:JSON.stringify({title,imgUrl,title_2,description,title_3,description_2,title_4,description_3,title_5,description_4,tag})
         })
         const blog=await response.json();
         setBlogs(blogs.concat(blog));

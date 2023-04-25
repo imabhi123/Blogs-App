@@ -18,20 +18,20 @@ Router.post('/addblog', fetchuser, [
     body('title', 'enter a valid title').isLength({ min: 3 }),
     body('description', 'Description must be atleast 5 characters').isLength({ min: 5 })], async (req, res) => {
         try {
-            const { title, description, tag } = req.body;
-            //if there are errors,return bad request and the errors
+            const { title, imgUrl, title_2,description,title_3,description_2,title_4,description_3,title_5,description_4,tag } = req.body; 
+            console.log(req.body)
             const errors = validationResult(req);
             if (!errors.isEmpty()) {
                 return res.status(400).json({ errors: errors.array() });
             }
             const blog = new Blog({
-                title, description, tag, user: req.user.id
+                title, imgUrl, title_2,description,title_3,description_2,title_4,description_3,title_5,description_4,tag, user: req.user.id
             })
             const saveBlog = await blog.save();
             res.json(saveBlog);
         } catch (error) {
             console.error(error.message);
-            res.status(500).send("some error occured")
+            res.status(500).send("some error occured");
         }
 
     })
