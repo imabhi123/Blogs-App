@@ -9,7 +9,6 @@ import SignUp from './components/SignUp';
 import { useState } from 'react';
 import Footer from './components/Footer/Footer';
 import Content from './components/Content';
-import Card from './components/Card';
 import MainCard from './components/MainCard';
 import AddBlog from './components/AddBlog';
 function App() {
@@ -33,7 +32,7 @@ function App() {
     <div>
     <Routes>
     <Route path="/about" element={<About/>}></Route>
-    <Route path="/card" element={<MainCard setFlag={setFlag}/>}></Route>
+    <Route path="/MainCard" element={<MainCard setFlag={setFlag}/>}></Route>
     <Route path="/" element={<Home showAlert={showAlert}/>}></Route>
     <Route path="/AddBlog" element={<AddBlog showAlert={showAlert} setFlag={setFlag}/>}></Route>
     <Route path="/login" element={<Login showAlert={showAlert} setFlag={setFlag}/>}></Route>

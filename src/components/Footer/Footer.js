@@ -112,7 +112,7 @@ const Footer = () => {
                 Fincial Model
               </p>
               <p>
-              <i class="fa-brands fa-linkedin me-3"></i> <i class="fa-brands fa-facebook me-3"></i> <i class="fa-brands fa-twitter me-3"></i>
+              <i className="fa-brands fa-linkedin me-3"></i> <i className="fa-brands fa-facebook me-3"></i> <i className="fa-brands fa-twitter me-3"></i>
               </p>
             </div>
            

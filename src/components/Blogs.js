@@ -6,16 +6,13 @@ import Card from "./Card";
 const Blogs = (props) => {
   const context = useContext(blogContext);
   const { blogs, getBlog, editBlog } = context;
-  console.log(blogs);
   const ref = useRef(null);
   const refClose = useRef(null);
   let history = useNavigate();
   useEffect(() => {
     if (localStorage.getItem("token")) {
-      console.log(localStorage.getItem("token"));
       getBlog();
     } else {
-      console.log(localStorage.getItem("token"));
       history("/login");
     }
     // eslint-disable-next-line
@@ -146,7 +143,6 @@ const Blogs = (props) => {
         <h2 className="mx-md-3 text-dark">Your Blogs</h2>
         <div className="row container m-auto">
           {blogs.map((blog) => {
-            console.log(blog.length);
             return <Card blog={blog} updateblog={updateBlog} key={blog._id} />;
           })}
         </div>

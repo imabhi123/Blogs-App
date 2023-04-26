@@ -1,11 +1,7 @@
 const mongoose = require('mongoose');
 
-const mongoURI = "mongodb://localhost:27017/inotebook"
-
-const connectToMongo = ()=>{
-    mongoose.connect(mongoURI, ()=>{
-        console.log("Connected to Mongo Successfully");
-    })
+const mongoURI = 'mongodb://localhost:27017/Crossval'
+const connectToMongo = async()=>{
+    const connect=await mongoose.connect(mongoURI)
 }
-
 module.exports = connectToMongo;

@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import blogContext from "../context/blogs/blogContext";
+import { useNavigate } from "react-router-dom";
 const AddBlog = ({ setFlag }) => {
   setFlag(true);
   const context = useContext(blogContext);
@@ -17,9 +18,9 @@ const AddBlog = ({ setFlag }) => {
     description_4: "",
     tag: "",
   });
+  const history=useNavigate();
   const handleClick = (e) => {
     e.preventDefault();
-    console.log(blog)
     addBlog(blog.title, blog.imgUrl, blog.title_2,blog.description,blog.title_3,blog.description_2,blog.title_4,blog.description_3,blog.title_5,blog.description_4,blog.tag);
     setBlog({
       title: "",
@@ -34,9 +35,9 @@ const AddBlog = ({ setFlag }) => {
       description_4: "",
       tag: "",
     });
+    history('/')
   };
   const onChange = (e) => {
-    console.log(blog);
     setBlog({ ...blog, [e.target.name]: e.target.value });
   };
   return (

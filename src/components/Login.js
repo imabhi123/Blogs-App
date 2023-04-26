@@ -20,7 +20,6 @@ const Login = (props) => {
       }),
     });
     const json = await response.json();
-    console.log(json);
     history('/');
     if (json.success) {
       localStorage.setItem("token", json.authToken);
@@ -29,26 +28,14 @@ const Login = (props) => {
     } else {
       props.showAlert("Invalid credentials", "danger");
     }
+    props.setFlag(false);
   };
   //   document.querySelector
   const onChange = (e) => {
-    console.log(credentials);
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
   return (
     <div style={{ backgroundColor: "white" }}>
-      {/* <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                    <label htmlFor="email" className="form-label">Email address</label>
-                    <input type="email" className="form-control" name='email' id="email" value={credentials.email} onChange={onChange} aria-describedby="emailHelp" />
-                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="password" className="form-label">Password</label>
-                    <input type="password" className="form-control" name='password' value={credentials.password} onChange={onChange} id="password" />
-                </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
-            </form> */}
       <div className="container h-100">
         <div className="d-flex justify-content-center h-100">
           <div className="user_card" style={{height:'70vh',width:'30vw'}}>
