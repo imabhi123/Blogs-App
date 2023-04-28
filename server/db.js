@@ -1,7 +1,16 @@
-const mongoose = require('mongoose');
+require('dotenv').config()
+const mongoose = require("mongoose");
 
-const mongoURI = 'mongodb://localhost:27017/Crossval'
-const connectToMongo = async()=>{
-    const connect=await mongoose.connect(mongoURI)
-}
+const connectToMongo = async () => {
+  const URL =process.env.DATABASE;
+  try {
+    await mongoose.connect(URL, {
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
+    });
+    console.log("database connected successfully");
+  } catch (error) {
+    console.log(`Error while connecting to database `, error.message);
+  }
+};
 module.exports = connectToMongo;
