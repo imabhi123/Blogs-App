@@ -7,7 +7,7 @@ const SignUp = (props) => {
   const { name, email, password} = credentials;
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/auth/createuser", {
+    const response = await fetch("https://crossvall.onrender.com/api/auth/createuser", {
       method: 'POST',
       headers: {
         'Content-Type': 'Application/json'
@@ -30,7 +30,7 @@ const SignUp = (props) => {
     <div className='container'>
       <div className="container h-100">
         <div className="d-flex justify-content-center h-100">
-          <div className="user_card" style={{height:'70vh',width:'30vw'}}>
+          <div className="user_card" style={{height:'70vh',width:'60vw'}}>
             <div
               className="justify-content-center form_container mx-5"
               style={{ color: "black",marginTop:'40px' }}

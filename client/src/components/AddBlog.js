@@ -44,7 +44,7 @@ const AddBlog = ({ setFlag }) => {
     <div className="container my-3">
       <div className="container h-100">
         <div className="d-flex justify-content-center h-100">
-          <div className="user_card" style={{ height: "120vh", width: "40vw" }}>
+          <div className="user_card" style={{ height: "120vh", width: "60vw" }}>
             <div
               className="justify-content-center form_container mx-5"
               style={{ color: "black", marginTop: "0px" }}

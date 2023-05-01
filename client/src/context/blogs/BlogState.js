@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import BlogContext from './blogContext'
 const BlogState=(props)=>{
-  const host="http://localhost:5000"
+  const host="https://crossvall.onrender.com"
     const blogsInitial=[]
       const [blogs,setBlogs]=useState(blogsInitial);
       //get All Blogs
